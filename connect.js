@@ -18,7 +18,6 @@ const getConnection = function () {
 				pass: `${MONGO_DB.MONGO_PASS}`,
 				useNewUrlParser: true,
 				useUnifiedTopology: true,
-				//useCreateIndex: true,
 				serverSelectionTimeoutMS: 5000,
 			});
 
