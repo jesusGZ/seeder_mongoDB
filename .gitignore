@@ -1,0 +1,6 @@
+/.env
+/config.js
+/connect.js
+/index.js
+/model.js
+/node_modules
