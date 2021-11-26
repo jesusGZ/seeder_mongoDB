@@ -7,21 +7,6 @@ DB.getConnection().catch((err) => {
 	console.error('[Error db]: ' + err);
 });
 
-async function seede() {
-    try {
-                
-        for (var i = 0; i < 200; i++) {
-            let result = await process() 
-            console.log(result)
-        }
-    
-        console.log('Proceso finalizado');
-    
-        } catch (error) {
-            console.log(error);
-        }
-}
-
 function process(){
     return new Promise(async (resolve) => {
         try {
@@ -50,6 +35,21 @@ function process(){
             resolve(error)
         }
     })
+}
+
+async function seede() {
+    try {
+                
+        for (var i = 0; i < 50000; i++) {
+            let result = await process() 
+            console.log(result)
+        }
+    
+        console.log('Proceso finalizado');
+    
+        } catch (error) {
+            console.log(error);
+        }
 }
     
 module.exports = seede()
