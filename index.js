@@ -37,7 +37,7 @@ function process(){
     })
 }
 
-async function seede() {
+async function seed() {
     try {
                 
         for (var i = 0; i < 50000; i++) {
@@ -52,4 +52,4 @@ async function seede() {
         }
 }
     
-module.exports = seede()
+module.exports = seed()

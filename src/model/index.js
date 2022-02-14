@@ -16,17 +16,11 @@ let StoreSchema= Schema({
     instagram: { type: String, default: null },
     image: { type: String, default: null },
     stars: { type: Number, default: 0 }
- 
-     
 }, 
-{timestamps:true, versionKey: false }, // esto crea createdAt, updateAt internamente sin declararlo
-{
-    versionKey: false 
-});
- 
+{timestamps:true, versionKey: false },
+{versionKey: false });
  
 StoreSchema.plugin(uniqueValidator, {message: '{PATH} debe ser unico'});
-//StoreSchema.plugin(paginate);
  
 module.exports = mongoose.model('Store',StoreSchema);
 
